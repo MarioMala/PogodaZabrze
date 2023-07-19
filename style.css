@@ -1,0 +1,93 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;500;700&family=Oswald:wght@200;300;400;500;700&family=Roboto:wght@100;300;700&family=Teko:wght@300;400;700&family=Ubuntu+Condensed&display=swap');
+
+*,
+after,
+before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--fontIBM: 'IBM Plex Mono', monospace;
+	--fontOswald: 'Oswald', sans-serif;
+	--fontRoboto: 'Roboto', sans-serif;
+	--fontTeko: 'Teko', sans-serif;
+	--fontUbuntu: 'Ubuntu Condensed', sans-serif;
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: var(--fontIBM);
+	background-color: #ee5522;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d23d09' fill-opacity='0.78'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.78'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+	min-width: 80vw;
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid #fff;
+}
+
+.input-container {
+	min-width: 20rem;
+	min-height: 4rem;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+#input-mail {
+	min-width: 100%;
+	min-height: 100%;
+	background-color: inherit;
+	border-radius: 10px;
+	outline: none;
+}
+
+.label-mail {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: #fff;
+}
+
+.btn-container{
+	min-width: 20rem;
+	min-height: 4rem;
+}
+
+.btn {
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+	border: 2px solid #fff;
+	cursor: pointer;
+	background-color: inherit;
+	color: #fff;
+}
+
+.btn:hover {
+	color: orange;
+	background-color: #fff;
+	font-weight: bold;
+}
+
+#text-area {
+	margin-bottom: 1rem;
+	outline: none;
+}
+
+.fa-regular {
+	margin-right: 1rem;
+}
