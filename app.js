@@ -35,7 +35,7 @@ async function fetchWeather() {
 	try {
 		const response = await fetch(URL);
 		const data = await response.json();
-		
+
 		container.innerHTML += `
         <p class='address'>${data.resolvedAddress}</p>
         <p class='latitude'>Szerokość geograficzna: ${data.latitude}°</p>
@@ -44,7 +44,7 @@ async function fetchWeather() {
         <p class='humidity'>Wilgotność powietrza: ${data.currentConditions.humidity} %</p>
         <p class='pressure'>Ciśnienie powietrza: ${data.currentConditions.pressure} hPa</p>
         <p class='temp'>Temperatura powietrza: ${data.currentConditions.temp}°C</p>
-        <p class='solarradiation'>Promieniowanie słoneczne: ${data.currentConditions.solarradiation} lumenów</p>
+        <p class='solarradiation'>Promieniowanie słoneczne: ${data.currentConditions.solarradiation} lx</p>
 		 <p class='sunrise'>Wschód słońca o godz: ${data.currentConditions.sunrise}</p>
 		 <p class='sunset'>Zachód słońca o godz: ${data.currentConditions.sunset}</p>
         `;

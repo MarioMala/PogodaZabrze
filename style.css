@@ -98,7 +98,6 @@ a:hover {
 	font-style: italic;
 }
 
-
 .container-history {
 	display: flex;
 	justify-content: space-evenly;
@@ -108,27 +107,22 @@ a:hover {
 	min-height: 100vh;
 }
 
-
-
 .container-history p {
 	margin: 1rem;
-	font-size: .8rem;
+	font-size: 1.5rem;
 }
 .container-history span {
-	margin-top: 1rem;
+	margin-top: 1.8rem;
 	font-size: 1.2rem;
 	font-family: var(--fontRoboto);
 	font-weight: bold;
 	color: #fff;
 }
 
-
-
-
 .weather-box {
 	width: 100%;
 	display: flex;
-	margin: .5rem;
+	margin: 0.5rem;
 	border: 1px solid #fff;
 	color: #fff;
 }
