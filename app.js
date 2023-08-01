@@ -2,31 +2,25 @@
 const container = document.querySelector('.container');
 const timeBox = document.querySelector('.time-box');
 
-let currentTime = () => {
-	let currentTime = new Date();
-	let h = currentTime.getHours();
-	if (h < 9) {
-		h = '0' + h;
-	}
-	let m = currentTime.getMinutes();
-	if (m < 9) {
-		m = '0' + m;
-	}
-	let s = currentTime.getSeconds();
-	if (s < 9) {
-		s = '0' + s;
-	}
-	let current = `${h}:${m}:${s}`;
 
-	return current;
+const currentTime = () => {
+	return function time() {
+		const date = new Date();
+
+		let h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+		let m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+		let s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+
+		let timeString = `${h}:${m}:${s}`;
+
+		timeBox.innerHTML = `
+   <p class='time'>${timeString}</p>
+   `;
+	};
 };
 
-let updateDisplay = () => {
-	let current = currentTime();
-	timeBox.innerHTML = `<p class='time'>Bieżący czas: ${current}</p>`;
-};
-
-setInterval(updateDisplay, 1000);
+const newTime = currentTime();
+setInterval(newTime, 1000);
 
 const URL =
 	'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Zabrze?unitGroup=metric&key=Y7J37B7LSLELMQDYV4AANMW37&contentType=json';

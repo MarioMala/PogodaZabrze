@@ -9,9 +9,9 @@ async function historyWeather() {
 	try {
 		const response = await fetch(URL);
 		const data = await response.json();
-		
-		const history = [...data.days]
-		console.log(history)
+
+		const history = [...data.days];
+
 		history.forEach(day => {
 			containerHistory.innerHTML += `
 			<span>Dane za dzień:  ${day.datetime}</span>
@@ -22,16 +22,12 @@ async function historyWeather() {
 				<p class='temp-max'>Temperatura maksymalna: ${day.tempmax}°C</p>
 				<p class='temp-min'>Temperatura minimalna: ${day.tempmin}°C</p>
 				<p class='temp-max'>Średnia temperatura: ${day.temp}°C</p>
-				<p class='pressure'>Ciśnienie: ${day.pressure}hPa</p>
+				<p class='pressure'>Ciśnienie: ${day.pressure}%</p>
 				<p class='humidity'>Wilgotność powietrza: ${day.humidity} hPa</p>
 			</div>
 			
 			`;
-		
-		})
-
-		
-		
+		});
 	} catch (err) {
 		console.log(err);
 	}
